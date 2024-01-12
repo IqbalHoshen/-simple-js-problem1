@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Click and remove list</h1>
+    <ul id="list_containar">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Quod, optio corrupti.</li>
+        <li class="item">Cumque, quo tempore.</li>
+        <li class="item">Quae, perspiciatis ad?</li>
+        <li class="item">Similique, dolore at?</li>
+        <li class="item">Perferendis, ipsa vitae.</li>
+    </ul>
+    <button id="btn-add-item">Add Item</button>
+
+    <script>
+        const temp1 = document.getElementsByClassName('item');
+        for (const temp2 of temp1) {
+            temp2.addEventListener('click', function (event) {
+                event.target.parentNode.removeChild(event.target);
+            })
+        }
+
+        document.getElementById('btn-add-item').addEventListener('click', function (event) {
+            const listContainer = document.getElementById('list_containar');
+            const list = document.createElement('li');
+            list.innerText = 'New Text Add';
+            list.classList.add('item');
+            listContainer.appendChild(list);
+        })
+
+
+
+    </script>
+</body>
+
+
+</html>

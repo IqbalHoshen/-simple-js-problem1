@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyup</title>
+</head>
+
+<body>
+    <h1 id="headtext">Click button remove the text</h1>
+    <input id="input_text" type="text">
+    <button id="delete_button" placeholder="write delete" disabled>delete</button>
+
+    <script>
+        document.getElementById('input_text').addEventListener('keyup', function (event) {
+            const tempText = event.target.value;
+            const deleteButton = document.getElementById('delete_button');
+            if (tempText === 'delete') {
+                deleteButton.removeAttribute('disabled');
+            }
+            else {
+                deleteButton.setAttribute('disabled', true);
+            }
+        })
+
+        document.getElementById('delete_button').addEventListener('click', function () {
+            const temp1 = document.getElementById('headtext');
+            temp1.style.display = 'none';
+        })
+    </script>
+
+</body>
+
+</html>
