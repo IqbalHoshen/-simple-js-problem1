@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>my word page</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-italic {
+            font-style: italic;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
+
+</head>
+
+<body class="bg-teal-400">
+    <header>
+        <h3 class="font-semibold text-5xl text-center my-8">My text Editor</h3>
+    </header>
+
+    <main class="flex flex-col items-center bg-teal-100 border-solid border-black border-4 mx-auto w-9/12">
+
+        <section class="grid grid-cols-3 justify-items-center">
+            <section class="flex gap-6 items-center mr-20">
+                <div><img id="Text-bold" class="h-6" src="./images/icons8-bold-30.png" alt=""></div>
+                <div><img id="Text-italic" class="h-6" src="./images/icons8-italics-48.png" alt=""></div>
+                <div><img id="Text-underline" class="h-6" src="./images/icons8-underline-48.png" alt=""></div>
+            </section>
+
+            <section class="flex gap-6 items-center mr-16">
+                <div><img id="left_shift" class="h-6" src="./images/icons8-align-left-48.png" alt=""></div>
+                <div><img id="center_shift" class="h-6" src="./images/icons8-align-text-center-48.png" alt=""></div>
+                <div><img id="right_shift" class="h-6" src="./images/icons8-align-right-48.png" alt=""></div>
+                <div><img id="justify_shift" class="h-6" src="./images/icons8-align-justify-48.png" alt=""></div>
+            </section>
+
+            <section class="flex gap-6 items-center">
+                <div>
+                    <input type="number" id="quantity" name="quantity" min="12" max="128">
+                </div>
+                <div class="flex flex-row items-center">
+                    <label class="text-lg font-semibold" for="favcolor">aA</label>
+                    <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+                </div>
+            </section>
+
+        </section>
+
+        <section class="mb-10">
+            <hr class="border-solid border-black border-2 mb-8 mx-auto w-10/12">
+            <textarea class="px-3 py-2 w-[800px] h-[500px]" id="Text_input" name="w3review"></textarea>
+        </section>
+
+    </main>
+
+
+
+    <script src="text-bold.js"></script>
+</body>
+
+</html>
